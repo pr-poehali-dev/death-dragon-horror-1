@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
@@ -25,145 +26,118 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background film-grain">
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-background to-background pointer-events-none" />
-      
-      <div className="relative z-10">
-        <section className="min-h-screen flex items-center justify-center px-4 py-20">
-          <div className="max-w-4xl text-center space-y-8 fade-in-up">
-            <div className="inline-block p-4 candle-flicker">
-              <Icon name="Flame" size={64} className="text-primary animate-pulse-glow" />
-            </div>
-            
-            <h1 className="font-cormorant text-6xl md:text-8xl font-bold text-foreground tracking-wider">
-              ДРАКОН СМЕРТИ
-            </h1>
-            
-            <div className="w-32 h-1 mx-auto bg-gradient-to-r from-transparent via-primary to-transparent" />
-            
-            <p className="font-alegreya text-xl md:text-2xl text-muted-foreground italic max-w-2xl mx-auto leading-relaxed">
-              "Когда луна окрасится кровью, и тени поглотят свет, 
-              придёт он из глубин забвения..."
-            </p>
-            
-            <div className="pt-8">
-              <Icon name="ChevronDown" size={32} className="text-primary animate-float mx-auto" />
-            </div>
-          </div>
-        </section>
+      <div
+        className="h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
+        style={{
+          backgroundImage:
+            "url('https://cdn.poehali.dev/projects/80749753-2b4e-424d-af2a-a3e1210dbaa2/files/3274f653-9354-469c-ae8d-2b3f489b4930.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background"></div>
 
-        <section className="px-4 py-20">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="font-cormorant text-5xl md:text-6xl font-bold text-foreground">
+        <div className="relative z-10 text-center px-4 max-w-4xl">
+          <h1 className="font-cormorant text-7xl md:text-9xl font-bold mb-6 text-primary candle-flicker">
+            ДРАКОН СМЕРТИ
+          </h1>
+          <p className="font-alegreya text-xl md:text-2xl text-accent mb-8 italic">
+            "Когда луна окрасится кровью..."
+          </p>
+          <div className="inline-block animate-float">
+            <Icon name="ChevronDown" size={48} className="text-accent" />
+          </div>
+        </div>
+      </div>
+
+
+      <div className="container mx-auto px-4 py-16 max-w-6xl">
+        <section className="mb-24">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1 space-y-6">
+              <h2 className="font-cormorant text-5xl md:text-6xl font-bold text-primary">
                 Пророчество Гадалки
               </h2>
-              <div className="w-24 h-1 mx-auto bg-primary" />
+              <Card className="vintage-border bg-card/60 backdrop-blur p-6 space-y-4 text-card-foreground font-alegreya text-lg">
+                <p className="text-2xl text-accent font-bold">
+                  "В год кровавой луны,
+                </p>
+                <p>
+                  когда звёзды сойдут с небес, а тени станут длиннее света,
+                  явится Он — Дракон Смерти."
+                </p>
+                <Separator className="bg-primary/30" />
+                <p>
+                  Старая гадалка предсказала это 50 лет назад. Её слова записали
+                  в древнем свитке и спрятали в храме.
+                </p>
+                <p className="text-destructive font-semibold">
+                  В этом году все знаки сбываются. Луна окрасилась кровью.
+                  Звёзды падают каждую ночь.
+                </p>
+              </Card>
+
             </div>
-            
-            <Card className="vintage-border bg-card/80 backdrop-blur-sm p-8 md:p-12 space-y-6">
-              <div className="flex items-start gap-4">
-                <Icon name="Scroll" size={32} className="text-primary flex-shrink-0 mt-1" />
-                <div className="space-y-4 text-card-foreground font-alegreya text-lg leading-relaxed">
-                  <p>
-                    Старая гадалка, жившая на окраине деревни, давно предупреждала о грядущей беде. 
-                    Её глаза, помутневшие от времени, видели то, что скрыто от других.
-                  </p>
-                  <p className="italic text-primary font-semibold">
-                    "В год, когда урожай будет богат, а сердца людей беспечны, 
-                    спустится с гор древнее зло. Дракон Смерти пробудится от векового сна, 
-                    и пламя его гнева поглотит всё на своём пути."
-                  </p>
-                  <p>
-                    Никто не верил её словам. Деревня процветала, жители смеялись над 
-                    суевериями старухи. Но когда небо потемнело, а в воздухе запахло серой, 
-                    все вспомнили о пророчестве...
+            <div className="order-1 md:order-2">
+              <img
+                src="https://cdn.poehali.dev/projects/80749753-2b4e-424d-af2a-a3e1210dbaa2/files/e1280c5c-b097-4fa8-be2d-dd08da54e71f.jpg"
+                alt="Гадалка"
+                className="rounded-lg vintage-border w-full candle-flicker"
+              />
+            </div>
+          </div>
+        </section>
+
+        <Separator className="my-16 bg-accent/30" />
+
+        <section>
+          <h2 className="font-cormorant text-5xl md:text-6xl font-bold mb-12 text-center text-accent">
+            Артефакты Тьмы
+          </h2>
+          <div className="mb-12 rounded-lg overflow-hidden">
+            <img
+              src="https://cdn.poehali.dev/projects/80749753-2b4e-424d-af2a-a3e1210dbaa2/files/5dff1c5b-7b01-443b-8c14-96fee8a9523d.jpg"
+              alt="Артефакты"
+              className="w-full h-80 object-cover candle-flicker vintage-border"
+            />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {artifacts.map((artifact) => (
+              <Card
+                key={artifact.id}
+                className="p-6 bg-card/60 backdrop-blur border-primary/20 hover:border-accent/50 transition-all hover:scale-105 cursor-pointer group"
+              >
+                <div className="flex flex-col items-center gap-4 text-center">
+                  <div className="p-3 bg-primary/20 rounded-lg group-hover:bg-accent/20 transition-colors">
+                    <Icon
+                      name={artifact.icon as any}
+                      size={40}
+                      className="text-primary group-hover:text-accent transition-colors animate-pulse-glow"
+                    />
+                  </div>
+                  <h3 className="font-cormorant text-2xl font-bold text-primary group-hover:text-accent transition-colors">
+                    {artifact.name}
+                  </h3>
+                  <p className="text-muted-foreground font-alegreya">
+                    {artifact.description}
                   </p>
                 </div>
-              </div>
-            </Card>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="vintage-border bg-card/80 backdrop-blur-sm p-8 space-y-4">
-                <Icon name="Eye" size={40} className="text-accent" />
-                <h3 className="font-cormorant text-3xl font-bold text-card-foreground">
-                  Первые Знаки
-                </h3>
-                <p className="text-muted-foreground font-alegreya leading-relaxed">
-                  Птицы перестали петь. Скот беспокойно метался в загонах. 
-                  По ночам слышался далёкий рёв, от которого стыла кровь в жилах.
-                </p>
               </Card>
-
-              <Card className="vintage-border bg-card/80 backdrop-blur-sm p-8 space-y-4">
-                <Icon name="Skull" size={40} className="text-destructive" />
-                <h3 className="font-cormorant text-3xl font-bold text-card-foreground">
-                  Ночь Пробуждения
-                </h3>
-                <p className="text-muted-foreground font-alegreya leading-relaxed">
-                  Полная луна скрылась за тучами. Земля содрогнулась. 
-                  Из древней пещеры вырвался столб чёрного дыма и адского пламени.
-                </p>
-              </Card>
-            </div>
+            ))}
+          </div>
           </div>
         </section>
 
-        <section className="px-4 py-20">
-          <div className="max-w-6xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="font-cormorant text-5xl md:text-6xl font-bold text-foreground">
-                Проклятые Артефакты
-              </h2>
-              <div className="w-24 h-1 mx-auto bg-primary" />
-              <p className="font-alegreya text-xl text-muted-foreground max-w-2xl mx-auto">
-                Свидетельства ужаса, собранные теми, кто осмелился приблизиться к логову зверя
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {artifacts.map((artifact, index) => (
-                <Card 
-                  key={artifact.id}
-                  className="vintage-border bg-card/80 backdrop-blur-sm p-8 space-y-6 hover:scale-105 transition-transform duration-300"
-                  style={{ animationDelay: `${index * 200}ms` }}
-                >
-                  <div className="flex justify-center">
-                    <div className="p-4 bg-primary/20 rounded-full candle-flicker">
-                      <Icon name={artifact.icon as any} size={48} className="text-primary" />
-                    </div>
-                  </div>
-                  
-                  <div className="text-center space-y-3">
-                    <h3 className="font-cormorant text-2xl font-bold text-card-foreground">
-                      {artifact.name}
-                    </h3>
-                    <p className="text-muted-foreground font-alegreya leading-relaxed">
-                      {artifact.description}
-                    </p>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="px-4 py-20 pb-32">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-block p-4 candle-flicker">
-              <Icon name="AlertTriangle" size={48} className="text-destructive" />
-            </div>
-            
-            <p className="font-cormorant text-3xl md:text-4xl font-bold text-foreground italic">
-              "Пророчество сбылось. Дракон пришёл. <br />Выживет ли кто-нибудь, чтобы рассказать эту историю?"
+        <div className="mt-24 text-center">
+          <Card className="p-12 bg-card/40 backdrop-blur border-destructive/50 inline-block">
+            <Icon name="Flame" size={56} className="text-destructive candle-flicker mx-auto mb-4" />
+            <p className="font-cormorant text-3xl text-destructive font-bold mb-4">
+              Время истекает...
             </p>
-            
-            <div className="pt-8 opacity-50">
-              <p className="font-alegreya text-sm text-muted-foreground">
-                Конец... или только начало?
-              </p>
-            </div>
-          </div>
-        </section>
+            <p className="font-alegreya text-xl text-foreground/80">
+              Последняя надежда деревни — найти древнее оружие
+            </p>
+          </Card>
+        </div>
       </div>
     </div>
   );
