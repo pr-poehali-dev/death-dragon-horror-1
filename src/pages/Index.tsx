@@ -1,8 +1,27 @@
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Icon from "@/components/ui/icon";
+import { useState, useRef } from "react";
 
 const Index = () => {
+  const [hoveredArtifact, setHoveredArtifact] = useState<number | null>(null);
+  const hoverSoundRef = useRef<HTMLAudioElement | null>(null);
+  const clickSoundRef = useRef<HTMLAudioElement | null>(null);
+
+  const playHoverSound = () => {
+    if (hoverSoundRef.current) {
+      hoverSoundRef.current.currentTime = 0;
+      hoverSoundRef.current.play().catch(() => {});
+    }
+  };
+
+  const playClickSound = () => {
+    if (clickSoundRef.current) {
+      clickSoundRef.current.currentTime = 0;
+      clickSoundRef.current.play().catch(() => {});
+    }
+  };
+
   const artifacts = [
     {
       id: 1,
@@ -26,6 +45,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background film-grain">
+      <audio ref={hoverSoundRef} src="https://cdn.freesound.org/previews/140/140776_2615119-lq.mp3" preload="auto" />
+      <audio ref={clickSoundRef} src="https://cdn.freesound.org/previews/264/264981_4486188-lq.mp3" preload="auto" />
       <div
         className="h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
         style={{
@@ -56,7 +77,10 @@ const Index = () => {
               <h2 className="font-cormorant text-5xl md:text-6xl font-bold text-primary">
                 Пророчество Гадалки
               </h2>
-              <Card className="vintage-border bg-card/60 backdrop-blur p-6 space-y-4 text-card-foreground font-alegreya text-lg">
+              <Card 
+                className="vintage-border bg-card/60 backdrop-blur p-6 space-y-4 text-card-foreground font-alegreya text-lg cursor-pointer hover:scale-[1.02] transition-transform"
+                onClick={playClickSound}
+              >
                 <p className="text-2xl text-accent font-bold">
                   "В год кровавой луны,
                 </p>
@@ -105,6 +129,12 @@ const Index = () => {
               <Card
                 key={artifact.id}
                 className="p-6 bg-card/60 backdrop-blur border-primary/20 hover:border-accent/50 transition-all hover:scale-105 cursor-pointer group"
+                onMouseEnter={() => {
+                  setHoveredArtifact(artifact.id);
+                  playHoverSound();
+                }}
+                onMouseLeave={() => setHoveredArtifact(null)}
+                onClick={playClickSound}
               >
                 <div className="flex flex-col items-center gap-4 text-center">
                   <div className="p-3 bg-primary/20 rounded-lg group-hover:bg-accent/20 transition-colors">
