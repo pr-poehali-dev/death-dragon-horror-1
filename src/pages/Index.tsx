@@ -124,7 +124,6 @@ const Index = () => {
               </Card>
             ))}
           </div>
-          </div>
         </section>
 
         <div className="mt-24 text-center">
