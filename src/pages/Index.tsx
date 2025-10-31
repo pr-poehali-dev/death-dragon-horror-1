@@ -64,14 +64,50 @@ const Index = () => {
           <p className="font-alegreya text-xl md:text-2xl text-accent mb-8 italic">
             "Когда луна окрасится кровью..."
           </p>
-          <div className="inline-block animate-float">
+          <a href="#story-begin" className="inline-block animate-float hover:scale-110 transition-transform">
             <Icon name="ChevronDown" size={48} className="text-accent" />
-          </div>
+          </a>
         </div>
       </div>
 
 
       <div className="container mx-auto px-4 py-16 max-w-6xl">
+        <section id="story-begin" className="mb-32 scroll-mt-16">
+          <h2 className="font-cormorant text-5xl md:text-6xl font-bold mb-12 text-center text-accent">
+            Как Всё Началось
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-1">
+              <img
+                src="https://cdn.poehali.dev/projects/80749753-2b4e-424d-af2a-a3e1210dbaa2/files/97a5b6ed-8c5b-4603-97f9-8d26ecf616d7.jpg"
+                alt="Мирная деревня"
+                className="rounded-lg vintage-border w-full"
+              />
+            </div>
+            <div className="order-2 space-y-6">
+              <Card className="vintage-border bg-card/60 backdrop-blur p-6 space-y-4 text-card-foreground font-alegreya text-lg">
+                <p className="text-2xl text-primary font-bold font-cormorant">
+                  Когда-то это была мирная деревня...
+                </p>
+                <p>
+                  Люди жили спокойно, обрабатывали поля, растили детей. 
+                  Никто не верил в древние легенды о драконах.
+                </p>
+                <Separator className="bg-accent/30" />
+                <p>
+                  Старики рассказывали сказки у костра, но молодёжь только смеялась. 
+                  "Драконы? Это байки для детей!"
+                </p>
+                <p className="text-muted-foreground italic">
+                  Но в деревне жила одна старая гадалка, которая видела будущее...
+                </p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <Separator className="my-16 bg-destructive/30" />
+
         <section className="mb-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 space-y-6">
