@@ -124,4 +124,49 @@
       inset 0 0 20px rgba(0, 0, 0, 0.5),
       0 0 20px rgba(139, 0, 0, 0.3);
   }
+
+  .fog-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .fog-effect::before,
+  .fog-effect::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(
+      circle,
+      rgba(139, 0, 0, 0.1) 0%,
+      transparent 70%
+    );
+    animation: fog-drift 20s ease-in-out infinite;
+  }
+
+  .fog-effect::after {
+    animation-delay: -10s;
+    animation-duration: 25s;
+  }
+
+  @keyframes fog-drift {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0.3;
+    }
+    33% {
+      transform: translate(10%, -10%) scale(1.1);
+      opacity: 0.5;
+    }
+    66% {
+      transform: translate(-10%, 10%) scale(0.9);
+      opacity: 0.4;
+    }
+  }
 }

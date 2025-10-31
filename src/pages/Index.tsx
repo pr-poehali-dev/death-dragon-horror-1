@@ -55,6 +55,7 @@ const Index = () => {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background"></div>
+        <div className="fog-effect"></div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl">
           <h1 className="font-cormorant text-7xl md:text-9xl font-bold mb-6 text-primary candle-flicker">
