@@ -149,6 +149,49 @@ const Index = () => {
 
         <Separator className="my-16 bg-accent/30" />
 
+        <section className="mb-32">
+          <h2 className="font-cormorant text-5xl md:text-6xl font-bold mb-12 text-center text-destructive">
+            Появление Героя
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-1">
+              <Card className="vintage-border bg-card/60 backdrop-blur p-6 space-y-4 text-card-foreground font-alegreya text-lg">
+                <p className="text-2xl text-primary font-bold font-cormorant">
+                  Когда всё казалось потеряно...
+                </p>
+                <p>
+                  Из дальних земель пришёл одинокий воин. Лицо его скрывал капюшон, 
+                  а за спиной висел древний меч, покрытый рунами.
+                </p>
+                <Separator className="bg-accent/30" />
+                <p className="text-accent font-semibold">
+                  "Я слышал о драконе, что терроризирует ваши земли," — 
+                  сказал он старейшинам деревни.
+                </p>
+                <p>
+                  Никто не знал его имени. Никто не знал, откуда он пришёл. 
+                  Но в его глазах горел огонь решимости.
+                </p>
+                <p className="text-destructive italic font-bold">
+                  Он был готов сразиться с самой смертью.
+                </p>
+              </Card>
+            </div>
+            <div className="order-2">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-destructive/20 to-accent/20 rounded-lg blur-xl group-hover:blur-2xl transition-all" />
+                <img
+                  src="https://cdn.poehali.dev/projects/80749753-2b4e-424d-af2a-a3e1210dbaa2/files/93dd4aef-6f89-41ac-8aba-d1b28fc493b2.jpg"
+                  alt="Храбрый воин"
+                  className="rounded-lg vintage-border w-full relative z-10 hover:scale-[1.02] transition-transform"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Separator className="my-16 bg-destructive/50" />
+
         <section>
           <h2 className="font-cormorant text-5xl md:text-6xl font-bold mb-12 text-center text-accent">
             Артефакты Тьмы
