@@ -236,17 +236,143 @@ const Index = () => {
           </div>
         </section>
 
-        <div className="mt-24 text-center">
-          <Card className="p-12 bg-card/40 backdrop-blur border-destructive/50 inline-block">
-            <Icon name="Flame" size={56} className="text-destructive candle-flicker mx-auto mb-4" />
-            <p className="font-cormorant text-3xl text-destructive font-bold mb-4">
-              Время истекает...
+        <Separator className="my-16 bg-destructive/50" />
+
+        <section className="mb-32">
+          <h2 className="font-cormorant text-5xl md:text-6xl font-bold mb-12 text-center text-destructive">
+            Путь к Логову Дракона
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <Card className="vintage-border bg-card/60 backdrop-blur p-6 space-y-4 text-card-foreground font-alegreya text-lg">
+                <p className="text-2xl text-accent font-bold font-cormorant">
+                  На рассвете воин отправился в путь...
+                </p>
+                <p>
+                  Горная тропа вела к вершине, где среди скал зияла чёрная пещера. 
+                  Местные называли её "Пастью Смерти".
+                </p>
+                <Separator className="bg-destructive/30" />
+                <p>
+                  Путь был долгим и опасным. Обвалы, ледяные ветра, кости павших смельчаков — 
+                  всё это пытался остановить героя.
+                </p>
+                <p className="text-destructive font-semibold">
+                  Но ничто не могло остановить его решимость.
+                </p>
+                <p className="italic">
+                  У входа в пещеру воздух накалился. Дракон чувствовал приближение врага...
+                </p>
+              </Card>
+            </div>
+            <div className="order-1 md:order-2">
+              <img
+                src="https://cdn.poehali.dev/projects/80749753-2b4e-424d-af2a-a3e1210dbaa2/files/39ce3759-0e0c-4131-985f-a717faf8a830.jpg"
+                alt="Путь к пещере дракона"
+                className="rounded-lg vintage-border w-full hover:scale-[1.02] transition-transform"
+              />
+            </div>
+          </div>
+        </section>
+
+        <Separator className="my-16 bg-destructive/70" />
+
+        <section className="mb-32">
+          <h2 className="font-cormorant text-5xl md:text-6xl font-bold mb-12 text-center text-destructive animate-pulse-glow">
+            Финальная Битва
+          </h2>
+          <div className="mb-12 rounded-lg overflow-hidden relative group">
+            <div className="absolute inset-0 bg-gradient-to-t from-destructive/50 to-transparent z-10" />
+            <img
+              src="https://cdn.poehali.dev/projects/80749753-2b4e-424d-af2a-a3e1210dbaa2/files/57c3c3fe-c76b-4bbb-ad57-7704b3967220.jpg"
+              alt="Битва с драконом"
+              className="w-full h-96 object-cover candle-flicker"
+            />
+          </div>
+          <Card className="vintage-border bg-card/60 backdrop-blur p-8 space-y-6 text-card-foreground font-alegreya text-lg">
+            <p className="text-3xl text-destructive font-bold font-cormorant text-center">
+              Схватка длилась целую ночь
             </p>
-            <p className="font-alegreya text-xl text-foreground/80">
-              Последняя надежда деревни — найти древнее оружие
-            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <p className="flex items-start gap-3">
+                  <Icon name="Flame" className="text-destructive mt-1 flex-shrink-0" size={24} />
+                  <span>Огненное дыхание дракона плавило камни вокруг</span>
+                </p>
+                <p className="flex items-start gap-3">
+                  <Icon name="Swords" className="text-accent mt-1 flex-shrink-0" size={24} />
+                  <span>Меч воина рассекал воздух, оставляя светящиеся следы рун</span>
+                </p>
+                <p className="flex items-start gap-3">
+                  <Icon name="Shield" className="text-primary mt-1 flex-shrink-0" size={24} />
+                  <span>Каждый удар отзывался громом в глубинах пещеры</span>
+                </p>
+              </div>
+              <div className="space-y-4">
+                <p className="text-accent font-semibold">
+                  Дракон был могуч, но воин был быстрее. Чешуя трескалась под ударами древнего клинка.
+                </p>
+                <p className="text-destructive italic">
+                  На рассвете раздался последний рёв чудовища. Дракон пал.
+                </p>
+                <p className="text-primary font-bold text-xl">
+                  Проклятие было снято!
+                </p>
+              </div>
+            </div>
           </Card>
-        </div>
+        </section>
+
+        <Separator className="my-16 bg-accent/50" />
+
+        <section className="mb-32">
+          <h2 className="font-cormorant text-5xl md:text-6xl font-bold mb-12 text-center text-accent">
+            Триумф Героя
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-1">
+              <img
+                src="https://cdn.poehali.dev/projects/80749753-2b4e-424d-af2a-a3e1210dbaa2/files/e0031316-ae8f-4379-9d7d-c32d1da94089.jpg"
+                alt="Празднование победы"
+                className="rounded-lg vintage-border w-full"
+              />
+            </div>
+            <div className="order-2">
+              <Card className="vintage-border bg-card/60 backdrop-blur p-6 space-y-4 text-card-foreground font-alegreya text-lg">
+                <p className="text-2xl text-accent font-bold font-cormorant">
+                  Возвращение героя
+                </p>
+                <p>
+                  Когда воин спустился с горы, весь народ вышел его встречать. 
+                  Голова дракона была доказательством победы.
+                </p>
+                <Separator className="bg-accent/30" />
+                <div className="space-y-3 text-primary">
+                  <p className="flex items-center gap-2">
+                    <Icon name="PartyPopper" className="text-accent" size={20} />
+                    Три дня и три ночи длился праздник
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <Icon name="Trophy" className="text-accent" size={20} />
+                    Герою предложили стать правителем
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <Icon name="Crown" className="text-accent" size={20} />
+                    Воздвигли памятник у главных ворот
+                  </p>
+                </div>
+                <Separator className="bg-accent/30" />
+                <p className="text-muted-foreground italic">
+                  Но наутро четвёртого дня героя не было. Он ушёл так же тихо, как и пришёл. 
+                  Ведь в мире ещё оставалось зло, которое нужно было победить...
+                </p>
+                <p className="text-accent font-bold text-center text-2xl font-cormorant">
+                  Легенда о нём живёт до сих пор
+                </p>
+              </Card>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
